@@ -7,4 +7,3 @@ CREATE TABLE IF NOT EXISTS employees (
     salary DECIMAL(10, 2)
 );
 
-
