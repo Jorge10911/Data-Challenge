@@ -3,7 +3,6 @@ import csv
 import datetime  
 import re
 import validators
-regex = r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,7}"
 
 
 conn = sqlite3.connect('employees.db')  # Make sure the filename ends with .db
@@ -12,7 +11,7 @@ cursor = conn.cursor()
 cursor.execute("DROP TABLE IF EXISTS employees;")
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS employees (
-    id SERIAL PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(100) UNIQUE NOT NULL,
     email VARCHAR(40) UNIQUE NOT NULL,
     date_of_birth DATE,

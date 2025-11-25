@@ -1,5 +1,0 @@
-CREATE DATABASE employees_db;
-
-CREATE USER employer WITH PASSWORD 'password' SUPERUSER;
-GRANT ALL PRIVILEGES ON DATABASE employees_db TO employer;
-
