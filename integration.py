@@ -27,6 +27,7 @@ with open('data/employees.csv', 'r', newline='', encoding='utf-8') as f:
     for row in reader:
 
         #get full name from first and last name
+        
     
         name = f"{row['FIRST_NAME']} {row['LAST_NAME']}"
 
